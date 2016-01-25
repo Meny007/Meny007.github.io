@@ -1,0 +1,61 @@
+---
+title       : Gage R&R Calculation
+subtitle    : Developing Data Products - Coursera Specialization
+author      : Meny N.
+job         : Jan 24, 2016
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## The Course Project
+
+For the final assignment, a Gage R&R calculator was programmed.
+
+Gage R&R is a method used for Quality Methods, metrology and Testing measurements.
+
+It is a statistical method to estimate the amount of variability induced in measurements by the measurement system itself, and compares it to the total variability observed in order to determine the variability of the measurement system.
+
+The goal for this tool is to calculate and point out if a measurement system is capable for the job by having significant lower variation contribution in comparison to the natural process variation.
+
+In the project case,there is an embedded file, trued data collected by the author. There were 3 testers used and 10 parts measured 3 times in each tester.
+
+The intention is to show the user at this point what the tool is accomplishing.
+
+
+--- .class #id 
+
+## Dataset Example
+
+Here is how the data needs to be set and collected:
+
+```{r,echo=FALSE}
+testDat<-read.csv("E:/DataScienceSpecialization/9_DevelopingDataProducts/Week4/test1/testResults.csv")
+head(testDat[,1:7],15)
+```
+
+
+---.class #id
+
+## User Interface and Output
+
+The user will choose the parameter of interest that was tested.
+
+In the output there are 2 tabs:
+
+1. The ANOVA and Gage R&R output from actual results
+
+2. The tab with the relevant plots.
+
+---.class #id
+
+## Project Data
+
+Anova Gage R&R Tool links:
+
+GITHUB - [ui.R and server.R codes](https://github.com/Meny007/DevelopingDataProducts)
+
+Gage R&R Tool - [LINK](https://menynh.shinyapps.io/gageRRcalc/)
