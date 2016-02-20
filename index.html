@@ -1,1 +1,170 @@
-index.Rmd
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gage R&amp;R Calculation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Gage R&amp;R Calculation">
+  <meta name="author" content="Meny N.">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Gage R&amp;R Calculation</h1>
+    <h2>Developing Data Products - Coursera Specialization</h2>
+    <p>Meny N.<br/>Feb 20, 2016</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The Course Project</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>For the final assignment, a Gage R&amp;R calculator was programmed.</p>
+
+<p>Gage R&amp;R is a method used for Quality Methods, metrology and Testing measurements.</p>
+
+<p>It is a statistical method to estimate the amount of variability induced in measurements by the measurement system itself, and compares it to the total variability observed in order to determine the variability of the measurement system.</p>
+
+<p>The goal for this tool is to calculate and point out if a measurement system is capable for the job by having significant lower variation contribution in comparison to the natural process variation.</p>
+
+<p>In the project case,there is an embedded file, trued data collected by the author. There were 3 testers used and 10 parts measured 3 times in each tester.</p>
+
+<p>The intention is to show the user at this point what the tool is accomplishing.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Dataset Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is how the data needs to be set and collected:</p>
+
+<pre><code>##    Tester Part    Par1    Par2    Par3    Par4    Par5
+## 1       1    1 9.71551 18.2190 32.1030 11.1581 8.93266
+## 2       2    1 9.04548 18.0412 35.6070 14.2172 8.93871
+## 3       3    1 9.10450 18.4862 23.3131  5.0504 8.55800
+## 4       1    2 9.29445 18.4382 32.2894 10.1716 9.18342
+## 5       2    2 9.26429 18.4561 35.8941 13.3792 8.69272
+## 6       3    2 9.55800 17.9642 22.2970  3.7745 8.54720
+## 7       1    3 8.82431 18.1967 31.9755 11.1458 8.54765
+## 8       2    3 8.83537 17.8886 35.9743 14.1351 8.58143
+## 9       3    3 9.05600 18.0749 22.5604  4.0009 8.44450
+## 10      1    4 8.64083 18.3854 30.1386 14.8150 8.66792
+## 11      2    4 9.08865 18.4102 34.7754 17.9157 8.86520
+## 12      3    4 9.16130 18.9736 21.4602  8.7349 8.62690
+## 13      1    5 9.46618 18.4292 30.8639 12.5292 7.78193
+## 14      2    5 9.08046 18.1727 34.4132 15.1527 8.80772
+## 15      3    5 9.00140 18.3293 21.0760  5.0103 8.87910
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>User Interface and Output</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The user will choose the parameter of interest that was tested.</p>
+
+<p>In the output there are 2 tabs:</p>
+
+<ol>
+<li><p>The ANOVA and Gage R&amp;R output from actual results</p></li>
+<li><p>The tab with the relevant plots.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Project Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Anova Gage R&amp;R Tool links:</p>
+
+<p>GITHUB - <a href="https://github.com/Meny007/Meny007.github.io">ui.R and server.R codes</a></p>
+
+<p>Gage R&amp;R Tool - <a href="https://menynh.shinyapps.io/gageRRcalc/">LINK</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The Course Project'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Dataset Example'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='User Interface and Output'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Project Data'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
